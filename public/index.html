@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Controle de Impressões — Secretaria</title>
+<link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">CI</div>
+      <div class="brand-title">Controle de Impressões</div>
+      <div class="brand-sub">Equipe de Secretaria</div>
+    </div>
+
+    <nav class="nav" id="nav">
+      <div class="nav-group-label">Visão geral</div>
+      <a class="nav-link" data-route="dashboard" href="#/dashboard">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 13h6V4H4v9zm0 7h6v-5H4v5zm10 0h6V11h-6v9zm0-16v5h6V4h-6z" fill="currentColor"/></svg>
+        Dashboard
+      </a>
+
+      <div class="nav-group-label">Cadastros</div>
+      <a class="nav-link" data-route="quadrante" href="#/quadrante">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="1.5" fill="currentColor"/><rect x="13" y="3" width="8" height="8" rx="1.5" fill="currentColor" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="1.5" fill="currentColor" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="1.5" fill="currentColor"/></svg>
+        Quadrante
+      </a>
+      <a class="nav-link" data-route="livros" href="#/livros">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 4h9a3 3 0 013 3v13H8a3 3 0 01-3-3V4z" fill="currentColor"/><path d="M5 17a3 3 0 003 3h9" stroke="var(--primary-dark)" stroke-width="1.2"/></svg>
+        Livros de Cânticos
+      </a>
+      <a class="nav-link" data-route="servos" href="#/servos">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2" fill="currentColor" opacity=".9"/><circle cx="12" cy="10" r="2.6" fill="var(--primary-dark)"/><path d="M7 17c1-2 3-3 5-3s4 1 5 3" stroke="var(--primary-dark)" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg>
+        Crachás de Servos
+      </a>
+      <a class="nav-link" data-route="jovens" href="#/jovens">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2" fill="currentColor" opacity=".9"/><circle cx="12" cy="9.6" r="2.4" fill="var(--primary-dark)"/><path d="M7.2 16.6c1-1.8 2.8-2.7 4.8-2.7s3.8.9 4.8 2.7" stroke="var(--primary-dark)" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg>
+        Crachás de Jovens
+      </a>
+
+      <div class="nav-group-label">Análise</div>
+      <a class="nav-link" data-route="relatorios" href="#/relatorios">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 20V10M12 20V4M18 20v-7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        Relatórios
+      </a>
+    </nav>
+
+    <div class="sidebar-foot">Dados salvos localmente em <code>data/db.json</code></div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar" id="topbar">
+      <div>
+        <h1 id="page-title">Dashboard</h1>
+        <div class="subtitle" id="page-subtitle">Visão geral do andamento das impressões</div>
+      </div>
+      <div class="topbar-actions" id="topbar-actions"></div>
+    </header>
+
+    <main class="content" id="content">
+      <!-- conteúdo renderizado via JS -->
+    </main>
+  </div>
+</div>
+
+<div id="modal-root"></div>
+<div class="toast-wrap" id="toast-root"></div>
+
+<script src="./js/app.js"></script>
+</body>
+</html>
