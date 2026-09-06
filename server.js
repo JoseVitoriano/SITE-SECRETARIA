@@ -1,7 +1,7 @@
 // server.js
 // Servidor único, sem dependências externas (usa apenas módulos nativos do Node).
 // Rode com: node server.js
-// Acesse:   http://localhost:3000
+// Acesse:   http://localhost:5000
 
 const http = require('http');
 const fs = require('fs');
@@ -12,7 +12,7 @@ const db = require('./lib/jsonDb');
 const dashboard = require('./lib/dashboard');
 const xlsExport = require('./lib/xlsExport');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const PUBLIC_DIR = path.join(__dirname, 'public');
 
 const MIME = {
