@@ -1,14 +1,14 @@
 {
-  "name": "controle-de-impressoes",
-  "version": "1.0.0",
-  "description": "Sistema web de controle de impressões (Quadrante, Livros de Cânticos, Crachás de Servos e Crachás de Jovens) com dashboard de indicadores.",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "engines": {
+  "name": "controle-de-impressoes",   
+  "version": "1.0.0",   
+  "description": "Sistema web de controle de impressões (Quadrante, Livros de Cânticos, Crachás de Servos e Crachás de Jovens) com dashboard de indicadores.",   
+  "main": "server.js",   
+  "scripts": {    
+  "start": "node server.js"
+  },  
+  "engines": {    
     "node": ">=16"
-  },
-  "license": "UNLICENSED",
-  "private": true
+  },   
+  "license": "UNLICENSED",  
+  "private": true 
 }

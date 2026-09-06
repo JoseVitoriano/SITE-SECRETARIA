@@ -8,12 +8,13 @@ const fs = require('fs');
 const path = require('path');
 const url = require('url');
 
+const PORT = process.env.PORT || 3000;
+
+const PUBLIC_DIR = path.resolve(__dirname, 'public');
+
 const db = require('./lib/jsonDb');
 const dashboard = require('./lib/dashboard');
 const xlsExport = require('./lib/xlsExport');
-
-const PORT = process.env.PORT || 5000;
-const PUBLIC_DIR = path.join(__dirname, 'public');
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
