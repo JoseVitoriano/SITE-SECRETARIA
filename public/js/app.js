@@ -166,45 +166,86 @@ function fmtDate(iso) {
 const api = {
   async list(moduleKey, params) {
     const qs = new URLSearchParams(params || {}).toString();
-    const res = await fetch(`/api/${moduleKey}${qs ? '?' + qs : ''}`);
-    if (!res.ok) throw new Error('Falha ao carregar dados');
+    const url = `/api/${moduleKey}${qs ? `?${qs}` : ''}`;
+
+    const res = await fetch(url);
+
+    if (!res.ok) {
+      throw new Error('Falha ao carregar dados');
+    }
+
     return res.json();
   },
+
   async get(moduleKey, id) {
     const res = await fetch(`/api/${moduleKey}/${id}`);
-    if (!res.ok) throw new Error('Registro não encontrado');
+
+    if (!res.ok) {
+      throw new Error('Registro não encontrado');
+    }
+
     return res.json();
   },
+
   async create(moduleKey, data) {
     const res = await fetch(`/api/${moduleKey}`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
     });
+
     const body = await res.json();
-    if (!res.ok) throw new Error(body.error || 'Erro ao salvar');
+
+    if (!res.ok) {
+      throw new Error(body.error || 'Erro ao salvar');
+    }
+
     return body;
   },
+
   async update(moduleKey, id, data) {
     const res = await fetch(`/api/${moduleKey}/${id}`, {
       method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
     });
+
     const body = await res.json();
-    if (!res.ok) throw new Error(body.error || 'Erro ao salvar');
+
+    if (!res.ok) {
+      throw new Error(body.error || 'Erro ao salvar');
+    }
+
     return body;
   },
+
   async remove(moduleKey, id) {
-    const res = await fetch(`/api/${moduleKey}/${id}`, { method: 'DELETE' });
+    const res = await fetch(`/api/${moduleKey}/${id}`, {
+      method: 'DELETE'
+    });
+
     const body = await res.json();
-    if (!res.ok) throw new Error(body.error || 'Erro ao excluir');
+
+    if (!res.ok) {
+      throw new Error(body.error || 'Erro ao excluir');
+    }
+
     return body;
   },
+
   async dashboard() {
     const res = await fetch('/api/dashboard');
+
+    if (!res.ok) {
+      throw new Error('Falha ao carregar dashboard');
+    }
+
     return res.json();
-  },
+  }
 };
 
 /* ---------------------------------- Toasts / Modal -------------------------------- */
