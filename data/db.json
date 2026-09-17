@@ -461,9 +461,18 @@
       "posImpressao": "PINTURA",
       "qtdePintados": 80,
       "situacaoPintura": "EM ANDAMENTO",
-      "historico": [],
+      "historico": [
+        {
+          "data": "2026-09-08T23:59:45.983Z",
+          "evento": "situacaoPintura: \"EM ANDAMENTO\" → \"CONCLUÍDA\""
+        },
+        {
+          "data": "2026-09-09T00:14:11.794Z",
+          "evento": "situacaoPintura: \"CONCLUÍDA\" → \"EM ANDAMENTO\""
+        }
+      ],
       "createdAt": "2026-09-06T00:59:51.267Z",
-      "updatedAt": "2026-09-06T00:59:51.267Z"
+      "updatedAt": "2026-09-09T00:14:11.795Z"
     }
   ],
   "livros": [
